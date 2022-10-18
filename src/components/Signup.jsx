@@ -10,7 +10,7 @@ const Signup = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const result = await axios.post("http://localhost:8000/api/auth/signup", form)
+    const result = await axios.post("https://aqueous-dawn-48698.herokuapp.com/api/auth/signup", form)
     if (result.status === 200) {
       // const token = result.data.token
       // localStorage.setItem("token", token)
