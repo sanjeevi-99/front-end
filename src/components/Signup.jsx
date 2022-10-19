@@ -9,17 +9,23 @@ const Signup = () => {
     setForm(prev => ({ ...prev, [key]: value }))
   }
   const handleSubmit = async (e) => {
+    try{
     e.preventDefault()
     const result = await axios.post("https://tranquil-cove-77086.herokuapp.com/api/auth/signup", form)
     if (result.status === 200) {
       // const token = result.data.token
       // localStorage.setItem("token", token)
-      navigate("/menu")
+      navigate("/home")
       localStorage.setItem('signup', true);
     }
     else {
-      alert(result.data.message)
+      alert("User already exists")
     }
+  }
+  catch(e){
+    console.log(e);
+    alert("User already exists")
+  }
   }
   return (
     <div className="rootdiv">
