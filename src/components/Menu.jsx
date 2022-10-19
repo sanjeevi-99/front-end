@@ -13,7 +13,7 @@ const Menu = () => {
     //     setForm(prev => ({ ...prev, [key]: value }))
     // }
     const getApi = async () => {
-        await axios.get('https://aqueous-dawn-48698.herokuapp.com/api/auth/fetchall')
+        await axios.get('https://tranquil-cove-77086.herokuapp.com/api/auth/fetchall')
             .then(function (response) {
                 // handle success
                 console.log(response);
